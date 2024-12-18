@@ -1,0 +1,26 @@
+@local=http://localhost:3000
+
+
+GET {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "noam",
+    "email": "email@email.com",
+    "password": "Aa123456",
+    "biz": "true"
+}
+
+###
+
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "email@email.com",
+    "password": "Aa123456"
+}
+
+###
+GET {{local}}/api/users/me 
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzYwNWExNTkwYzdhZTEyNDk1ZmYzZDEiLCJiaXoiOnRydWUsImlhdCI6MTczNDM3NzMzMH0.Gct128RB6VwEwyTrl-YuhixtnGnYZlFZFyEAFojM1NQ
