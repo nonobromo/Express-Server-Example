@@ -9,7 +9,7 @@ router.get("/me", authMW, async (req, res) => {
   res.json(await User.findById(req.user._id, { password: 0 }));
 });
 
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   // validate user input
   const { error } = validateUser(req.body);
   if (error) {
