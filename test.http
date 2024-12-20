@@ -23,4 +23,17 @@ Content-Type: application/json
 
 ###
 GET {{local}}/api/users/me 
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzYwNWExNTkwYzdhZTEyNDk1ZmYzZDEiLCJiaXoiOnRydWUsImlhdCI6MTczNDM3NzMzMH0.Gct128RB6VwEwyTrl-YuhixtnGnYZlFZFyEAFojM1NQ
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzYwNWExNTkwYzdhZTEyNDk1ZmYzZDEiLCJiaXoiOnRydWUsImlhdCI6MTczNDYyNTMwNH0.uqT8l8CAuoz0sEjNXjx7D0wpgDWpa2iOyY2Yjs0_Avk
+
+###
+
+POST {{local}}/api/cards
+x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzYwNWExNTkwYzdhZTEyNDk1ZmYzZDEiLCJiaXoiOnRydWUsImlhdCI6MTczNDYzNDExMn0.D_vl1S3bKsqwdd4a6vJtS-WYQXXa_eGA0vteCNd-u20
+Content-Type: application/json
+
+{
+    "bizName": "IKEA",
+    "bizPhone": "042244661",
+    "bizAddress": "Sweeden Stockholm",
+    "bizDescription": "A Place to take your girl to date where you argue about which side the chaise lounge will be"
+}
