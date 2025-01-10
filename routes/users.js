@@ -5,6 +5,10 @@ const _ = require("lodash");
 const { User, validateUser } = require("../model/users");
 const authMW = require("../middleware/auth");
 
+router.get("/hello", (req, res) => {
+  res.send("hello");
+});
+
 router.get("/me", authMW, async (req, res) => {
   res.json(await User.findById(req.user._id, { password: 0 }));
 });

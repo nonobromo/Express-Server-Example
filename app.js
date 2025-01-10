@@ -6,6 +6,8 @@ const app = express();
 app.use(cors());
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const cardsRouter = require("./routes/cards");
+const guidesRouter = require("./routes/guide");
 const PORT = 3000;
 
 app.use(require("morgan")("dev"));
@@ -13,7 +15,8 @@ app.use(express.json());
 
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
-app.use("/api/cards", cardRouter);
+app.use("/api/cards", cardsRouter);
+app.use("/api/guides", guidesRouter);
 connect();
 
 async function connect() {

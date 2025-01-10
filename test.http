@@ -1,6 +1,11 @@
 @local=http://localhost:3000
 
 
+GET {{local}}/api/users/hello
+
+###
+
+
 POST {{local}}/api/users
 Content-Type: application/json
 
@@ -24,3 +29,27 @@ Content-Type: application/json
 ###
 GET {{local}}/api/users/me 
 x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzYwNWExNTkwYzdhZTEyNDk1ZmYzZDEiLCJiaXoiOnRydWUsImlhdCI6MTczNDM3NzMzMH0.Gct128RB6VwEwyTrl-YuhixtnGnYZlFZFyEAFojM1NQ
+
+### 
+
+POST {{local}}/api/guides
+Content-Type: application/json
+
+{
+  "title": "How to change/set format cells in excel",
+  "description": "How to set different Cell formats to fields in excel",
+  "category": ["Excel"],
+  "steps": [
+    { "text": "Right Click on the filed you wish to change its format" },
+    { "text": "A window will open for you to change your desired format" }
+  ]
+
+}
+
+###
+
+GET {{local}}/api/guides?id=6768558f5f75aba72238da6d
+
+###
+
+{{local}}/api/guides/all
